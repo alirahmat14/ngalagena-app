@@ -24,8 +24,8 @@ def allowed_file(filename):
         '.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-Model_URL = '/static/models/'
-Upload_URL = '/static/uploaded_img/'
+Model_URL = os.getcwd()+'/static/models/'
+Upload_URL = os.getcwd()+'/static/uploaded_img/'
 
 np.set_printoptions(suppress=True)
 model = load_model(Model_URL + 'keras_model.h5', compile=False)
